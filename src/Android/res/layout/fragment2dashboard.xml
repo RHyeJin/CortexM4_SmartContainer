@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/progress"
+            android:layout_centerHorizontal="true"
+
+            android:layout_weight="1"
+            android:text=" 진행도"
+            android:textSize="30sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="15"
+
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/textViewProg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text=" 0%"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextSec"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="208dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toEndOf="@+id/editTextMin" />
+
+    <ImageView
+        android:id="@+id/imageViewAir"
+        android:layout_width="119dp"
+        android:layout_height="108dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/air_off"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLeft"
+        android:layout_width="56dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPwm"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAir"
+        app:srcCompat="@android:drawable/ic_media_rew" />
+
+    <ImageButton
+        android:id="@+id/imageButtonRight"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/textViewPwm"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAir"
+        app:srcCompat="@android:drawable/ic_media_ff" />
+
+    <TextView
+        android:id="@+id/textViewPwm"
+        android:layout_width="88dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:text="50"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAir" />
+
+    <ImageView
+        android:id="@+id/imageViewClock"
+        android:layout_width="113dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPwm"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/clock" />
+
+    <android.widget.Button
+        android:id="@+id/buttonSetTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:background="#3FC36F"
+        android:backgroundTint="#B951ACAC"
+        android:text="Set Timer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMin"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSetTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextHour"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="208dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextMin"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

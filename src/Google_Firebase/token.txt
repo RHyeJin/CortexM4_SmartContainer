@@ -1,0 +1,3 @@
+serviceAccountKey /home/pi/google_fcm/service-account.json
+projectId homeiot-d082f
+token dNxccZ3KSVuiaj9jHs5ie4:APA91bEXUBOAyPgdm2zL9x85Nia_CEKG8RZXkBEeKoB56cxSk6DmZe1TiRMHPJb2zXhyGl5oQ0-lXrcK8Tw7lyLKxoRl2V_3lQtXLpXkS-kouU_I0pMCP3uv_-gjNO3TC8r9Uuy-Rfiz 
